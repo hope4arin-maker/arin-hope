@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #FAF8F5;
+  --color-ink: #1A1A1A;
+  --color-brand-blue: #2D5BFF;
+  --color-brand-red: #FF4B2B;
+  --color-brand-yellow: #FFD600;
+  --color-brand-pink: #D1F033; /* Mapped from accent-green */
+  --font-display: 'Georgia', 'Lora', serif;
+  --font-body: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Utilities */
+.text-display {
+  font-family: var(--font-display);
+}
+
+.bento-card {
+  background-color: white;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 32px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-card:hover {
+  transform: translateY(-4px) scale(1.01);
+}
+
+.label-tag {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  display: block;
+}
